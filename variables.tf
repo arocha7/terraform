@@ -1,35 +1,35 @@
 variable "openstack_user_name" {
     description = "The username belonging to a Tenant"
-    default  = "son-admin"
+    default  = "ci-smartiot"
 }
 
 variable "openstack_tenant_name" {
     description = "The name of the Tenant"
-    default = "SON-NFV_QA"
+    default = "SMARTIOT"
 }
 
 variable "openstack_password" {
     description = "The password for the Tenant's user"
-    default = "$0nAdm1n"
+    default = "ci-smartiot"
 }
 
 variable "openstack_auth_url" {
     description = "The endpoint url to connect to OpenStack."
-    default = "http://10.112.76.200:5000/v2.0"
+    default = "http://10.112.223.10:5000/v2.0"
 }
 	
-variable "keypair" {
-    description = "The keypair to be used"
-    default = "son-admin"
-}
+#variable "keypair" {
+#    description = "The keypair to be used"
+#    default = ""
+#}
 
 variable "tenant_id" {
-    description = "The Tenant ID for SON-NFV_QA"
-    default = "7ce53db3704f45b087aad537f34d73c7"
+    description = "The Tenant ID for SMARTIOT"
+    default = "66786f52735f46d3a058c0dab9371613"
 }
 
 variable "tenant-net" {
-    description = "The network to be used"
+    description = "Subnet PTIN: 10.112.224.0/22"
     default = "net-ptin"
 }
 
@@ -51,7 +51,7 @@ variable "image" {
 
 variable "flavor" {
   description = "the name of the flavor with allocatates resources"
-  default = "m1.small"
+  default = "fl.default"
 }
 
 variable "region_name" {
@@ -59,6 +59,3 @@ variable "region_name" {
   default = "RegionOne"
 }
 
-variable "node_count" {
-  default = 6
-}
