@@ -8,36 +8,35 @@ network=10.112.0.0
 # Netmask to configure access in pg_hba
 netmask=16
 
-
 [historydb]
-historydb
+${smartiot_hosts}
 
 [catalogdb]
-catalogdb
+${smartiot_hosts}
 
 [inputqueue]
-inputqueue
+${smartiot_hosts}
 
 [deliveryqueue]
-deliveryqueue
+${smartiot_hosts}
 
 [listener]
-listener
+${smartiot_hosts}
 
 [processingworker]
-processingworker
+${smartiot_hosts}
 
 [deliveryworker]
-deliveryworker
+${smartiot_hosts}
 
 [retrydeliveryworker]
-retrydeliveryworker
+${smartiot_hosts}
 
 [configserver]
-configserver
+${smartiot_hosts}
 
 [logs]
-logs
+${smartiot_hosts}
 
 [${env}:children]
 historydb
