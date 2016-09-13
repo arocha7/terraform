@@ -1,9 +1,17 @@
 variable "node_count" {
-  default = 2
+  default = 1
 }
 
+module "vim_type" {
+  source = "./modules/vim_type"
+  #user_data="${foo}"
+}
 
-# create SMARTIOT instances
+module "qualification" {
+  source = "./modules/vim_type/placement/ptin/env/qualification"
+}
+
+# create SONATA-NFV instances
 resource "openstack_compute_instance_v2" "son-sp4qi" {
   count = "${var.node_count}"
   #name = "${lookup(var.node_name_list, count.index)}"
@@ -12,9 +20,9 @@ resource "openstack_compute_instance_v2" "son-sp4qi" {
   flavor_name = "${var.flavor}"
   #key_pair = "${var.keypair}"
   security_groups = [
-    "default"
+    "son-qual-secgrp"
   ]
   network = {
-    name = "net-ptin"
+    name = "{var.qual}"
   }
 }

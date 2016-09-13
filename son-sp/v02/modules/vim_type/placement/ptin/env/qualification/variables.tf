@@ -1,36 +1,36 @@
-variable "openstack_user_name" {
-    description = "The username belonging to a Tenant"
-    default  = "alberto-m-rocha"
+variable "openstack_auth_url" {
+    description = "Endpoint URL to connect to PTIN OpenStack."
+    default = "http://172.31.6.4:5000/v2.0"
 }
 
-variable "openstack_tenant_name" {
-    description = "The name of the Tenant"
-    default = "APTECIES"
+variable "openstack_user_name" {
+    description = "The username belonging to a Tenant"
+    default  = "son-qual"
 }
 
 variable "openstack_password" {
     description = "The password for the Tenant's user"
-    default = "********"
+    default = "S0n-qu@l"
 }
 
-variable "openstack_auth_url" {
-    description = "The endpoint url to connect to OpenStack."
-    default = "http://10.112.223.10:5000/v2.0"
-}
-	
 variable "keypair" {
     description = "The keypair to be used"
-    default = "arocha2"
+    default = "son-ift-ptin"
+}
+
+variable "openstack_tenant_name" {
+    description = "The name of the Tenant"
+    default = "son-qual"
 }
 
 variable "tenant_id" {
-    description = "The Tenant ID for SMARTIOT"
-    default = "b1020b3e64334677bf424959c5d7743f"
+    description = "The Tenant ID for ADMIN"
+    default = "d25999e1eea34010bbf4698c81ca844e"
 }
 
 variable "tenant-net" {
-    description = "Subnet PTIN: 10.112.224.0/22"
-    default = "net-ptin"
+    description = "External subnet PTIN: 172.31.6.0/24"
+    default = "son-qual-netw"
 }
 
 variable "external-gw" {
@@ -50,7 +50,7 @@ variable "image" {
 
 variable "flavor" {
   description = "the name of the flavor with allocatates resources"
-  default = "fl.default"
+  default = "m1.small"
 }
 
 variable "region_name" {
