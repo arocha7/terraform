@@ -1,0 +1,83 @@
+[all:vars]
+# Environment: dev => enable repo-prod-testing or prd
+env=qual
+
+# Network to configure access in pg_hba
+network=172.31.6.0
+
+# Netmask to configure access in pg_hba
+netmask=24
+
+[historydb]
+historydb-qual-01  ansible_host=192.168.246.105
+
+historydb-qual-02  ansible_host=192.168.246.98
+
+
+[catalogdb]
+sp-qual-01  ansible_host=192.168.246.108
+
+sp-qual-02  ansible_host=192.168.246.109
+
+
+[inputqueue]
+inputqueue-qual-01  ansible_host=192.168.246.115
+
+inputqueue-qual-02  ansible_host=192.168.246.116
+
+
+[deliveryqueue]
+deliveryqueue-qual-01  ansible_host=192.168.246.112
+
+deliveryqueue-qual-02  ansible_host=192.168.246.113
+
+
+[listener]
+listener-qual-01  ansible_host=192.168.246.103
+
+listener-qual-02  ansible_host=192.168.246.97
+
+
+[processingworker]
+processingworker-qual-01  ansible_host=192.168.246.104
+
+processingworker-qual-02  ansible_host=192.168.246.99
+
+
+[deliveryworker]
+deliveryworker-qual-01  ansible_host=192.168.246.106
+
+deliveryworker-qual-02  ansible_host=192.168.246.107
+
+
+[retrydeliveryworker]
+retrydeliveryworker-qual-01  ansible_host=192.168.246.100
+
+retrydeliveryworker-qual-02  ansible_host=192.168.246.101
+
+
+[configserver]
+configserver-qual-01  ansible_host=192.168.246.114
+
+configserver-qual-02  ansible_host=192.168.246.102
+
+
+[logs]
+logs-qual-01  ansible_host=192.168.246.110
+
+logs-qual-02  ansible_host=192.168.246.111
+
+
+[qual:children]
+historydb
+catalogdb
+inputqueue
+deliveryqueue
+listener
+processingworker
+deliveryworker
+retrydeliveryworker
+configserver
+logs
+
+
