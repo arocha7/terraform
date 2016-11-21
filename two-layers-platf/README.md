@@ -23,7 +23,9 @@ USAGE
 =====
 
 cd terraform/two-layers-platf
-./terraform.sh
+terraform plan    -var-file='os_2layers-trusty.tfvars'
+terraform apply   -var-file='os_2layers-trusty.tfvars'
+terraform destroy -var-file='os_2layers-trusty.tfvars'
 
 
 FEEDBACK
