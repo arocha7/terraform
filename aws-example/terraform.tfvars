@@ -2,7 +2,7 @@
 access_key = ""
 secret_key = ""
 region     = "eu-west-1"
-shared_credentials_file  = "/home/ubuntu/.aws/credentials"
+shared_credentials_file  = "~/.aws/credentials"
 
 # VM INSTANCE
 ami           = "ami-0d729a60"

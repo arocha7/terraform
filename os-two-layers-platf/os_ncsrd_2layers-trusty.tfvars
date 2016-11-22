@@ -1,9 +1,9 @@
 #
 # AUTH
-os_username"   { default = "sonata.dem"
-os_tenantname" { default = "sonata.dem"
-os_password"   { default = "S0n@t@.dem"
-os_auth_url"   { default = "http://10.31.1.3:5000/v2.0"
+os_username   = "sonata.dem"
+os_tenantname = "sonata.dem"
+os_password   = "**********"
+os_auth_url   = "http://10.31.1.3:5000/v2.0"
 
 # VM INSTANCE
 vm_name     = "vm"

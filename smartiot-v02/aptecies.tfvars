@@ -2,7 +2,7 @@ os_user_name = "smartiot"
 
 os_tenant_name = "APTECIES"
 
-os_password = "Sm@rt10t"
+os_password = "*********"
 
 os_auth_url = "http://10.112.223.10:5000/v2.0"
 

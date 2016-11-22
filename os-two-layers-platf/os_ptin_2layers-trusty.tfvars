@@ -2,7 +2,7 @@
 # AUTH
 os_username   = "son-dev"
 os_tenantname = "son-dev"
-os_password   = "S0n-d3v"
+os_password   = "*******"
 os_auth_url   = "http://172.31.6.4:5000/v2.0"
 
 # VM INSTANCE

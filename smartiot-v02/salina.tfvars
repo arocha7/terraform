@@ -1,12 +1,12 @@
-os_user_name = "son-demo"
+os_user_name   = "son-demo"
 
 os_tenant_name = "son-demo"
 
-os_password = "S0n-d3m0"
+os_passwordi   = "********"
 
-os_auth_url = "http://172.31.6.4:5000/v2.0"
+os_auth_url    = "http://172.31.6.4:5000/v2.0"
 
-os_keypair = "son-ift-ptin"
+os_keypair     = "son-ift-ptin"
 
 tenant_network = "son-demo-netw"
 
