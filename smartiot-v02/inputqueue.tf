@@ -8,7 +8,7 @@ variable "inputqueue_nodes" {
 resource "openstack_compute_instance_v2" "inputqueue" {
   count = "${var.inputqueue_nodes}"
   name = "${format("inputqueue%02d", count.index+1)}"
-  image_name = "RancherOS"
+  image_name = "centos7-cldimg"
   #availability_zone = ""
   flavor_id = "1"
   #key_pair = "${os_keypair}"
